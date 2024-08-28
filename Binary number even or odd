@@ -1,0 +1,22 @@
+#include <stdio.h>
+int oddeven(int a[],int l,int r){
+   
+    for (int i = l; i <= r; i++) {
+        printf("%d", a[i]);
+    }
+    printf("\n");
+    if (a[r] == 1) { // to check the last number of r is even or odd
+        printf(" odd.\n"); 
+    } else {
+        printf("even.\n");
+        
+    }
+}
+int main()
+{
+    int a[]={1, 0, 1, 0, 1};
+    int l=1;
+    int r=4;
+    oddeven(a,l,r);
+    return 0;
+}
