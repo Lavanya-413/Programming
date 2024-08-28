@@ -1,0 +1,37 @@
+#include <stdio.h>
+int disp(int a[],int n){
+    for(int i=0; i<n;i++){
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+}
+int evenpossum(int a[],int n){
+    for(int i=0;i<n/2;i++){
+        a[i]=a[i]+a[n-i-1];
+        a[n-i-1]=a[i]-a[n-i-1];
+        a[i]=a[i]-a[n-i-1];
+        
+    }
+    for(int i=0;i<n;i++)
+    printf("%d ",a[i]);
+    printf("\n");
+    
+    int sum=0;
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+           sum=sum+a[i]; 
+        }
+        
+    }
+    printf("%d\n",sum);
+    return 0;
+}
+int main()
+{
+    int a[]={10 ,20,30,40,50,60};
+    int n=6;
+    disp(a,n);
+    evenpossum(a,n);
+   
+    return 0;
+}
