@@ -1,0 +1,19 @@
+#include <stdio.h>
+int missingsmall(int a[],int n,int m){
+    for(int i=0;i<m;i++){
+        if(i>=n || a[i]!=i){
+            return i;
+        }
+    }
+    return m;
+}
+
+int main()
+{
+    int a[]={0, 1,3, 4, 6};
+    int n=sizeof(a) / sizeof(a[0]);
+    int m=10;
+    int result= missingsmall(a,n,m);
+    printf("%d",result);
+    return 0;
+}
